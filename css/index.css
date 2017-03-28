@@ -317,6 +317,9 @@
 	font-size: 14px;
 	font-weight: normal;
 }
+.singleStar__item img:hover,.product-name:hover{
+	cursor: pointer;
+}
 .product-inf{
 	color: #b0b0b0;
 }
@@ -361,6 +364,7 @@
 	float: right;
 	font-size: 16px;
 	padding-top: 30px;
+	cursor: pointer;
 }
 .container a:hover{
 	color: #ff6700;
@@ -373,6 +377,9 @@
 .intelligent_wrap{
 	height: 614px;
 	width: 100%;
+}
+.intelligent_wrap img{
+	cursor: pointer;
 }
 .intelligent_wrap div{
 	transition: all .3s;
@@ -508,6 +515,9 @@
 .footer__bottom_wrap_left a{
 	display: inline-block;
 	line-height: 8px;
+}
+.footer__bottom_wrap_left a:hover{
+	color: #ff6700;
 }
 .footer__bottom_wrap_left p{
 	line-height: 8px;

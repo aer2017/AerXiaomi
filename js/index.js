@@ -5,6 +5,7 @@ var prev = getElem('.prev');
 var next = getElem('.next');
 var dots = getAllElem('.dotsItem');
 var index = 0;
+var timer = null;
 //轮播大图
 function slideImg(){
 	//图片改变函数 
@@ -18,6 +19,11 @@ function slideImg(){
 	}
 
 	//鼠标移进移出图片改变
+	banner.onmouseover = function(){
+	if(timer){
+		clearInterval(timer);
+	}
+	}
 	banner.onmouseout = function(){
 		timer = setInterval(function(){
 		index++;
@@ -28,10 +34,7 @@ function slideImg(){
 	},3000)
 	}
 	banner.onmouseout();
-	banner.onmouseover = function(){
-	if(timer)
-	clearInterval(timer);
-	}
+	
 
 	//按圆点切换图片
 	var dotsChange = function(idx){
@@ -61,7 +64,7 @@ function slideImg(){
 slideImg();
 
 //明星产品图片滚动
-var timer = null;
+
 var starTimer = null;
 var navArrow = getElem('.nav-arrow');
 var starPrev = getElem('.nav-arrow_prev');
