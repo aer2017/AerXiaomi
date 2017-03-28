@@ -377,7 +377,7 @@
 .intelligent_wrap div{
 	transition: all .3s;
 }
-.intelligent_wrap div:hover{
+.intelligent-left:hover,.intelligent-right div:hover{
 	transform: translate(0,-2px);
 	box-shadow: 0 5px 20px 3px rgba(204,204,204,.5);
 }
