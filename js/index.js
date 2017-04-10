@@ -19,11 +19,6 @@ function slideImg(){
 	}
 
 	//鼠标移进移出图片改变
-	banner.onmouseover = function(){
-	if(timer){
-		clearInterval(timer);
-	}
-	}
 	banner.onmouseout = function(){
 		timer = setInterval(function(){
 		index++;
@@ -34,7 +29,11 @@ function slideImg(){
 	},3000)
 	}
 	banner.onmouseout();
-	
+	banner.onmouseover = function(){
+	if(timer){
+		clearInterval(timer);
+	}
+	}
 
 	//按圆点切换图片
 	var dotsChange = function(idx){
